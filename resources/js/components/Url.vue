@@ -3,7 +3,7 @@
             <a :href="field.value"
                 :title="field.title || field.value"
                 v-if="hasCustomHtml && clickable"
-                class="cursor-pointer no-underline text-90"
+                class="link-default"
                 :target="field.sameTab ? '_self' : '_blank'"
                 :rel="field.rel"
                 v-html="field.customHtml"
@@ -15,7 +15,7 @@
             <a :href="field.value"
                 :title="field.title || field.value"
                 v-else-if="field.value && clickable"
-                class="cursor-pointer dim no-underline text-primary flex items-center"
+                class="link-default flex items-center"
                 :target="field.sameTab ? '_self' : '_blank'"
                 :rel="field.rel"
             >

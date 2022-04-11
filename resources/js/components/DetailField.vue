@@ -1,19 +1,19 @@
 <template>
-    <panel-item :field="field">
-        <template slot="value">
-            <url-field :field="field" :clickable="field.clickable"></url-field>
-        </template>
-    </panel-item>
+  <PanelItem :index="index" :field="field">
+    <template v-slot:value>
+      <url-field :field="field" :clickable="field.clickable"></url-field>
+    </template>
+  </PanelItem>
 </template>
 
 <script>
-import Url from './Url'
+  import Url from './Url'
 
-export default {
+  export default {
     props: ['resource', 'resourceName', 'resourceId', 'field'],
 
     components: {
-        'url-field': Url
+      'url-field': Url
     }
-}
+  }
 </script>
